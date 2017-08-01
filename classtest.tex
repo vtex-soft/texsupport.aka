@@ -1,0 +1,239 @@
+\documentclass{akabook}
+\usepackage{showframe}
+\usepackage{amsmath}
+\usepackage{amsthm}
+%\usepackage[showframe]{geometry}
+\usepackage{lipsum}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\begin{document}
+\chapter{Heading 1 (Introduction)}
+
+\lipsum[1]
+\section{Heading 2}
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text\footnote{Corresponding Author, Corresponding author, Book Department, IOS Press, Nieuwe Hemweg
+6B, 1013 BG Amsterdam, The Netherlands; E-mail: bookproduction@iospress.nl.}
+
+\index{test a}
+\index{test b}
+\index{my test a}
+\index{my test b}
+\index{second}
+\index{third}
+\index{fourth}
+
+
+\subsection{itemize}
+ \begin{itemize}
+   \item First level item long text long text long text long text long text long text long text long text long text long text
+   \item First level item
+   \begin{itemize}
+     \item Second level item long text long text long text long text long text long text long text 
+long text long text long text
+     \item Second level item
+     \begin{itemize}
+       \item Third level item long text long text long text long text long text long text long text 
+long text long text long text
+       \item Third level item
+       \begin{itemize}
+         \item Fourth level item long text long text long text long text long text long text long 
+text long text long text long text
+         \item Fourth level item
+       \end{itemize}
+     \end{itemize}
+   \end{itemize}
+ \end{itemize}
+
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text
+
+%\tracingmacros=2
+\subsection{itemize and enumerate}
+\begin{enumerate}
+   \item The labels consists of sequential numbers.
+   \begin{itemize}
+     \item here is second level item.
+     \item The text in the entries may be of any length.
+       \begin{itemize}
+         \item here is third level item.
+         \item The text in the entries may be of any length.
+       \end{itemize}
+   \end{itemize}
+   \item The numbers starts at 1 with every call to the enumerate environment.
+\end{enumerate}
+
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text
+
+\subsection{enumerate}
+ \begin{enumerate}
+   \item First level item  long text long text long text long text long text long text long text long text long text long text 
+   \item First level item
+   \begin{enumerate}
+     \item Second level item long text long text long text long text long text long text long text 
+long text long text long text
+     \item Second level item
+     \begin{enumerate}
+       \item Third level item long text long text long text long text long text long text long text 
+long text long text long text
+       \item Third level item
+       \begin{enumerate}
+         \item Fourth level item long text long text long text long text long text long text long 
+text long text long text long text
+         \item Fourth level item
+       \end{enumerate}
+     \end{enumerate}
+   \end{enumerate}
+ \end{enumerate}
+
+Items.png
+
+\subsection{Heading 3}
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text
+\subsection{Heading 3}
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text
+\begin{quote}
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text
+\end{quote}
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text
+
+\subsubsection{Heading 4}
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text
+
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text
+
+\paragraph{Heading 5}
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text
+
+\section{Heading 2 Long text long text long text long text long  text long text long text long text long text long text}
+
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text
+
+\section*{Heading 2 (unnumbered)}
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text
+\index{second}
+\index{third}
+\index{fourth}
+
+
+\chapter{Heading 1}
+
+\section{Introduction}
+\label{intro}
+Your text comes here. Separate text sections with
+\section{Section title}
+\label{sec:1}
+Text with citations \cite{RefB} and \cite{RefJ}.
+\subsection{Subsection title}
+\label{sec:2}
+as required. Don't forget to give each section
+and subsection a unique label (see Sect.~\ref{sec:1}).
+\paragraph{Paragraph headings} Use paragraph headings as needed.
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+
+\begin{eqnarray}
+A&=&B,\\
+C&=&D,\\
+E&=&F
+\end{eqnarray}
+
+\begin{theorem}
+This is a standard theorem.
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text
+\end{theorem}
+
+\begin{definition}[here is note]
+This is a standard definition.
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text
+\end{definition}
+
+\begin{figure}
+\fbox{\makebox[50pt]{\vrule width0pt height50pt box}}
+\caption{figure sample 
+Long text long text long text long text long text long text
+Long text long text long text long text long text long text}
+\end{figure}
+
+
+
+\tracingmacros=2
+%\tracingmacros=0
+
+
+% For tables use
+\begin{table}
+% table caption is above the table
+\caption{Please write your table caption here}
+\label{tab:1}       % Give a unique label
+% For LaTeX tables use
+\begin{tabular}{lll}
+\hline\noalign{\smallskip}
+first & second & third  \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+number & number & number \\
+number & number & number \\
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+\begin{table}
+% table caption is above the table
+\caption{Please write your table caption here}
+\label{tab:1}       % Give a unique label
+% For LaTeX tables use
+\begin{tabular}{lll}
+\hline
+first & second & third  \\
+\hline
+number & number & number \\
+number & number & number \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{appendix}
+\chapter{Heading 1}
+
+\section{Introduction}
+Your text comes here. Separate text sections with
+\end{appendix}
+
+% Non-BibTeX users please use
+\begin{thebibliography}{}
+%
+% and use \bibitem to create references. Consult the Instructions
+% for authors for reference list style.
+%
+
+\bibitem{RefJ}
+% Format for Journal Reference
+A.N. Author, Article title, Journal Title 66 (1993), 856--890.
+Long text long text long text long text long text long text
+% Format for books
+\bibitem{RefB}
+A.N. Author, Book Title, Publisher Name, Publisher Location, 1995.
+% etc
+\end{thebibliography}
+
+\printindex
+
+\tableofcontents
+\end{document}
