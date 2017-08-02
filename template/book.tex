@@ -1,0 +1,29 @@
+\RequirePackage{etoolbox}
+\csdef{input@path}%
+{%
+ {sty/},% class file
+ {img/},% put your graphics files in img/ subfolder
+}
+
+\documentclass{akabook}
+
+%\includeonly{chapter01}
+\begin{document}
+
+\Frontmatter
+\include{frontmatter}
+
+\Mainmatter
+
+\include{chapter}
+%\include{chapter01}
+
+\appendix
+\include{appendix}
+
+
+\Backmatter
+\include{bibliography}
+
+\end{document}
+
