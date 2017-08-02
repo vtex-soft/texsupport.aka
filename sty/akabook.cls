@@ -1,7 +1,7 @@
 %% This is file `akabook.cls'
 %%
-%% Generic LaTeX 2e class file for the <publisher> publications
-%% Loads standart `book.cls' and then modifys it
+%% Generic LaTeX 2e class file for the publications in AKA book series.
+%% Loads standard `book.cls' and then modifies it.
 %% Use as replacement to 'book.cls'
 %%
 %% Macros written by Linas Stonys, VTeX, Lithuania
@@ -13,7 +13,7 @@
 %%
 %% It may be distributed under the terms of the LaTeX Project Public
 %% License, as described in lppl.txt in the base LaTeX distribution.
-%% Either version 1.0 or, at your option, any later version.
+%% Either version 1.3c or, at your option, any later version.
 %%
 %%
 \def\@version{2017/08/02}
