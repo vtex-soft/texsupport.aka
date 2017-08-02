@@ -16,7 +16,7 @@
 %% Either version 1.0 or, at your option, any later version.
 %%
 %%
-\def\@version{2017/07/25}
+\def\@version{2017/08/02}
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{akabook}[\@version, AKA 'book' style]
@@ -31,7 +31,7 @@
 \RequirePackage{mathptmx}
 \RequirePackage{graphicx}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DIMENSIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Dimensions
 % TEXT DIMENSIONS
 %% page a5 - 148x210mm
 \def\aka@trimwidth{148mm}
@@ -73,7 +73,7 @@
 \hoffset=-1in
 \AtBeginDvi{\special{papersize=\the\paperwidth,\the\paperheight}}%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LISTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Lists
 \def\@listi{\leftmargin\leftmargini
   \parsep \z@ 
   \topsep 8\p@ \@plus2\p@ \@minus4\p@
@@ -98,18 +98,18 @@
 \let\@listI\@listi
 \@listi
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FOOTNOTE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Footnote
 \def\footnoterule{%
   \kern -3\p@ 
   \hrule \@width 79\p@ \kern 2.6\p@ 
   }
 \def\@makefnmark{%
-  \unskip\hbox {\hskip8\p@ \normalfont \@thefnmark }%
+  \@textsuperscript{\normalfont \@thefnmark}%
   }
 \renewcommand\@makefntext[1]{%
     \parindent \z@%
     \noindent
-    \@makefnmark #1}
+    \hbox {\hskip8\p@ \let\@textsuperscript\relax \@makefnmark}#1}
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% address, maketitle, chapter
 
