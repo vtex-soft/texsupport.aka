@@ -16,7 +16,7 @@
 %% Either version 1.3c or, at your option, any later version.
 %%
 %%
-\def\@version{2017/08/02}
+\def\@version{2017/08/04}
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{akabook}[\@version, AKA 'book' style]
@@ -336,6 +336,10 @@
      \par}%
   \fi}
 
+\newenvironment{dedication}
+  {\vspace{\baselineskip}\noindent\small\centering}
+  {\par}
+  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Bibliography
 \def\@biblisti{%
   \parsep \z@ 
