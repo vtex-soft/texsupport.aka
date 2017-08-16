@@ -172,6 +172,7 @@ number & number & number \\
 It is recomended to use \verb!amsthm! package \cite{ref:amsthm} to make it easier 
 to define theorem environments and the alike.
 \begin{Verbatim}
+\usepackage{amsthm}
 \newtheorem{theorem}{Theorem}
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}
@@ -200,8 +201,9 @@ hyperlink; the proper cross-reference is \verb!\cite{Knuth96}!.
 
 \section{Bibliography}
 
-For bibliography citation managment it is recomended to use \file{natbib}.
-Is the most commonly used package for handling references in LaTeX.
+For bibliography citation management it is recomended to use \file{natbib},
+which 
+is the most commonly used package for handling references in LaTeX.
 You can choose between author--year (default) and numerical (option \verb!numbers!) citations.
 Further customization 
 can be made via \verb!\setcitestyle! macro (see \cite{ref:natbib}) for details.
@@ -211,7 +213,7 @@ can be made via \verb!\setcitestyle! macro (see \cite{ref:natbib}) for details.
 Index is an alphabetical list of words and 
 expressions with the pages of the book upon which they are to be found. 
 LaTeX supports the creation of indices with its package \file{index} (loaded automatically in \file{akabook}) \cite{ref:index}, 
-and its support program makeindex, called on some systems makeidx.
+and its support program \file{makeindex}, called on some systems \file{makeidx}.
 
 %\section{Acknowledgement}
 
@@ -223,13 +225,13 @@ generally used in books and academic writing and appears at the end of a book.
 %\section{Glossary List}
 
 
-\newpage
-\section{Submission}
-
-Submit one single file as a zip archive. 
-Pack your root folder \verb!<your-project-name>! with files and subfolders. 
-Check that subfolders \file{sty/}, \file{img/}, or \file{chapterNN/} (if any) are 
-present in a zip file.
+% \newpage
+% \section{Submission}
+%
+% Submit one single file as a zip archive. 
+% Pack your root folder \verb!<your-project-name>! with files and subfolders. 
+% Check that subfolders \file{sty/}, \file{img/}, or \file{chapterNN/} (if any) are 
+% present in a zip file.
 
 \begin{thebibliography}{9}
 \bibitem{ref:ukfaq} UK \TeX\ Users Group. UK list of \TeX\ frequently asked questions. 
