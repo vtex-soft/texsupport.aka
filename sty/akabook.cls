@@ -16,7 +16,7 @@
 %% Either version 1.3c or, at your option, any later version.
 %%
 %%
-\def\@version{2017/08/04}
+\def\@version{2017/09/05}
 
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{akabook}[\@version, AKA 'book' style]
@@ -144,6 +144,7 @@
   \clearpage
   }
 
+  
 \def\chapter@font{\fontsize{18}{22}\selectfont}
 \def\@makechapterhead#1{%
   \vspace*{6pt}%
@@ -155,6 +156,7 @@
 
 \def\@makeschapterhead#1{%
   \vspace*{6pt}%
+  \schaptermark{#1}%
   {\parindent \z@ \raggedright \normalfont
     \interlinepenalty\@M
     \chapter@font \hskip14\p@ #1\par\nobreak
@@ -184,17 +186,35 @@
                                    {-1em}%
                                    {\normalfont\small}}
 
+
+\def\schaptermark#1{\markboth{#1}{#1}}
+\def\chaptermark#1{%
+  \markboth {%
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \@chapapp\ \thechapter. \ %
+      \fi
+    \fi
+    #1}{%
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \@chapapp\ \thechapter. \ %
+      \fi
+    \fi
+    #1}}%
+
+\let\@mkboth\@gobbletwo    
 \def\ps@headings{%
-  \let\@oddfoot\@empty
-  \let\@evenfoot\@oddfoot
-  \def\@oddhead{\hfil\thepage}%
-  \def\@evenhead{\thepage\hfil}%
+  \def\@oddhead{\hfil{\textit{\leftmark}}}%
+  \def\@evenhead{{\textit{\leftmark}}\hfil}%
+  \def\@oddfoot{\hfil\thepage}%
+  \def\@evenfoot{\thepage\hfil}%
   }   
 \def\ps@plain{%
-  \let\@oddfoot\@empty
-  \let\@evenfoot\@oddfoot
-  \def\@oddhead{\hfil\thepage}%
-  \def\@evenhead{\thepage\hfil}%
+  \def\@oddhead{\hfil{\textit{\leftmark}}}%
+  \def\@evenhead{{\textit{\leftmark}}\hfil}%
+  \def\@oddfoot{\hfil\thepage}%
+  \def\@evenfoot{\thepage\hfil}%
   }   
 \ps@headings  
 
